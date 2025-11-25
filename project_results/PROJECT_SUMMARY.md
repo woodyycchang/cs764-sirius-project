@@ -26,7 +26,7 @@ Comprehensive benchmarking of Sirius GPU-native SQL engine on TPC-H and TPC-DS b
 - **Bug Discovery:** Critical SUM() aggregation error
 
 ### JOB Benchmark (Ayesha)
-- Status: In progress
+- 
 
 ## Major Findings
 
