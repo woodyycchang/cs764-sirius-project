@@ -1,22 +1,27 @@
-build
-.idea
-cmake-build-debug
-cmake-build-release
-duckdb_unittest_tempdir/
-.DS_Store
-testext
-test/python/__pycache__/
-test/__pycache__/
-.Rhistory
-tpch-data/dbgen
-.vscode/
-*.duckdb
-duckdb/*
-CMakeFiles/
+# Build artifacts
+build/
+cmake_install.cmake
 CMakeCache.txt
-dbgen/
-.venv
-cufile.log
-4stock_5day_avg_close.csv
-*result.csv
-*output.txt
+CMakeFiles/
+
+# Data files (too large for GitHub)
+*.tbl
+*.duckdb
+tpch_data/
+tpch-data/
+dbgen/*.tbl
+s1/
+
+# Temporary files
+*.csv
+*.zip
+*.o
+*.so
+
+# Keep logs but exclude if too large (>100MB)
+# build/release/log/*.log
+
+# Environment
+__pycache__/
+*.pyc
+.venv/
