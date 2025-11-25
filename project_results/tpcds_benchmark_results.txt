@@ -1,0 +1,271 @@
+========================================
+TPC-DS Benchmark Test Suite
+========================================
+
+Testing: Query 1: Simple Aggregation
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌────────┬───────────┬───────────────┐
+│ d_year │ num_sales │  total_sales  │
+│ int32  │   int64   │ decimal(38,2) │
+├────────┼───────────┼───────────────┤
+│   2001 │    546310 │ 1019954026.32 │
+└────────┴───────────┴───────────────┘
+Run Time (s): real 0.020 user 0.208658 sys 0.082673
+
+
+Testing: Query 2: Join + Aggregation
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌──────────────┬───────────┬───────────────┐
+│ s_store_name │ num_sales │  total_sales  │
+│   varchar    │   int64   │ decimal(38,2) │
+├──────────────┼───────────┼───────────────┤
+│ eing         │     90334 │  170513594.50 │
+│ able         │     88731 │  168441243.77 │
+│ ese          │     89525 │  168257207.18 │
+│ ation        │     88415 │  167661882.90 │
+│ ought        │     88115 │  166773145.90 │
+│ bar          │     88424 │  166075649.62 │
+└──────────────┴───────────┴───────────────┘
+Run Time (s): real 0.041 user 0.302553 sys 0.217604
+
+
+Testing: Query 3: Multi-way Join
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌──────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────────┬───────────────┐
+│    i_item_id     │                                                                                         i_item_desc                                                                                         │ s_store_name │     sales     │
+│     varchar      │                                                                                           varchar                                                                                           │   varchar    │ decimal(38,2) │
+├──────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────┼───────────────┤
+│ AAAAAAAAEMHCAAAA │ As great officials                                                                                                                                                                          │ bar          │      33317.12 │
+│ AAAAAAAAMEKDAAAA │ Large levels should add futures; fresh, good limitations may carry later units                                                                                                              │ ese          │      33259.92 │
+│ AAAAAAAAMHAEAAAA │ Reasons might bear unaware soldiers. Eyes used to see for example cruel, close workers. Matches can care. Stupid departments shall get quite to a sources; really positive police must      │ eing         │      32893.23 │
+│ AAAAAAAABAMAAAAA │ Courts vary new, chinese weeks. B                                                                                                                                                           │ ation        │      29301.91 │
+│ AAAAAAAAKBGDAAAA │ Critical, net conflicts would prevent neither on a patients. Separately medical prices destroy as possible measures. Machines might not cor                                                 │ ese          │      28853.52 │
+│ AAAAAAAAKOAEAAAA │ Small, dead particles set recently other boxes. Bright, personal locations house novel jobs. Twice residential judges underpin directions. Others want. Other songs star too p              │ eing         │      28656.10 │
+│ AAAAAAAAPMCCAAAA │ All royal                                                                                                                                                                                   │ ought        │      28592.25 │
+│ AAAAAAAAMGIAAAAA │ Chemicals should wait of course. Even good years shall not offer cool,                                                                                                                      │ ese          │      28388.77 │
+│ AAAAAAAAEMHDAAAA │ Again economic options c                                                                                                                                                                    │ ought        │      28149.46 │
+│ AAAAAAAALOMDAAAA │ Flexible a                                                                                                                                                                                  │ ese          │      28093.25 │
+│ AAAAAAAANJFEAAAA │ Very, new trends should not des                                                                                                                                                             │ able         │      28008.51 │
+│ AAAAAAAAOONAAAAA │ Hands would not provide in a features. Subsequent vehic                                                                                                                                     │ able         │      27730.23 │
+│ AAAAAAAANMDDAAAA │ Current mothers see both sure, poor months. Interesting, hard cattle shall not learn over on a men; new times handle for the weeks. Much confidential                                       │ bar          │      27677.07 │
+│ AAAAAAAAFJEEAAAA │ Appropriate, prime hours tell. Terms could take. Much new workers settle important, british players. Comprehensive tonnes will eat nearby. Due dec                                          │ ation        │      27311.19 │
+│ AAAAAAAACACBAAAA │ Traditional, concerned cases say more now tough minutes. New pictures stop by a letters. Shareholders cannot teach over average, physical memor                                             │ able         │      27032.99 │
+│ AAAAAAAABJMAAAAA │ Small dogs meet. Correc                                                                                                                                                                     │ eing         │      26845.73 │
+│ AAAAAAAANLOCAAAA │ Great parents light enough soviet shoulders. Orange bo                                                                                                                                      │ eing         │      26747.33 │
+│ AAAAAAAADECBAAAA │ Chemical, little examples vanish for a fragments. Joint examples pa                                                                                                                         │ eing         │      26719.28 │
+│ AAAAAAAAIBGBAAAA │ Particular departments draw never most stupid shoulders. Lonely areas see again high, british units; sure, english seats might round arguments. Running, interesting weeks ought to handle  │ eing         │      26548.42 │
+│ AAAAAAAAELIAAAAA │ So heavy years may not laugh only votes. Ministers explain over. Left sides should bring then reluctant products. Elements would issue little now full societ                               │ eing         │      26411.97 │
+├──────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────────┴───────────────┤
+│ 20 rows                                                                                                                                                                                                                             4 columns │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Run Time (s): real 0.077 user 0.424359 sys 0.375758
+
+
+Testing: Query 4: Complex Filter
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌────────┬───────┬───────────┬────────────────────┬───────────────┐
+│ d_year │ d_moy │ num_sales │      avg_sale      │  total_sales  │
+│ int32  │ int32 │   int64   │       double       │ decimal(38,2) │
+├────────┼───────┼───────────┼────────────────────┼───────────────┤
+│   2000 │     1 │     27400 │ 2189.9636445255474 │   60005003.86 │
+│   2000 │     2 │     21872 │  2194.466885058522 │   47997379.71 │
+│   2000 │     3 │     23079 │ 2162.0436756358595 │   49897805.99 │
+│   2000 │     4 │     22121 │ 2177.2976031824965 │   48164000.28 │
+│   2000 │     5 │     23525 │ 2180.5232408076513 │   51296809.24 │
+│   2000 │     6 │     22862 │  2164.889912081183 │   49493713.17 │
+│   2000 │     7 │     22637 │ 2166.1582877589785 │   49035325.16 │
+│   2000 │     8 │     51596 │ 2178.8526219086752 │  112420079.88 │
+│   2000 │     9 │     52825 │ 2163.0086551822055 │  114260932.21 │
+│   2000 │    10 │     52839 │ 2167.7743208614847 │  114543027.34 │
+│   2000 │    11 │     76541 │ 2163.6066807332018 │  165604618.95 │
+│   2000 │    12 │     80137 │ 2152.3241354180964 │  172480799.24 │
+│   2001 │     1 │     25632 │  2143.306283161673 │   54937226.65 │
+│   2001 │     2 │     20944 │ 2181.8527563980138 │   45696724.13 │
+│   2001 │     3 │     21701 │ 2159.8357965070736 │   46870596.62 │
+│   2001 │     4 │     22684 │  2182.339650414389 │   49504192.63 │
+│   2001 │     5 │     23031 │  2167.230550996483 │   49913486.82 │
+│   2001 │     6 │     22581 │  2181.432009654134 │   49258916.21 │
+│   2001 │     7 │     23874 │ 2154.1410496774733 │   51427963.42 │
+│   2001 │     8 │     51613 │  2173.808420746711 │  112196774.02 │
+│   2001 │     9 │     50158 │  2154.954106224331 │  108088188.06 │
+│   2001 │    10 │     53570 │ 2166.1482083255555 │  116040559.52 │
+│   2001 │    11 │     74837 │  2158.017322180205 │  161499542.34 │
+│   2001 │    12 │     80365 │ 2138.6959228519877 │  171876297.84 │
+│   2002 │     1 │     28570 │  2157.345149107455 │   61635350.91 │
+│   2002 │     2 │     20517 │ 2174.0584900326558 │   44605158.04 │
+│   2002 │     3 │     22834 │  2146.585096347552 │   49015124.09 │
+│   2002 │     4 │     21881 │  2167.014956811846 │   47416454.27 │
+│   2002 │     5 │     22936 │  2149.724666899198 │   49306084.96 │
+│   2002 │     6 │     22207 │   2158.18876210204 │   47926897.84 │
+│   2002 │     7 │     22433 │  2149.446868006954 │   48218541.59 │
+│   2002 │     8 │     49916 │  2157.245268851671 │  107681054.84 │
+│   2002 │     9 │     51276 │   2169.78833118808 │  111258066.47 │
+│   2002 │    10 │     53351 │ 2167.3943821109256 │  115632657.68 │
+│   2002 │    11 │     76268 │  2156.053211438611 │  164437866.33 │
+│   2002 │    12 │     81215 │ 2154.7637856307333 │  174999140.85 │
+├────────┴───────┴───────────┴────────────────────┴───────────────┤
+│ 36 rows                                               5 columns │
+└─────────────────────────────────────────────────────────────────┘
+Run Time (s): real 0.024 user 0.278178 sys 0.086655
+
+
+Testing: Query 5: Customer Analysis
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌───────────┬───────────────────┬─────────────────────┬───────────────┬───────────────┐
+│ cd_gender │ cd_marital_status │ cd_education_status │ num_customers │  total_sales  │
+│  varchar  │      varchar      │       varchar       │     int64     │ decimal(38,2) │
+├───────────┼───────────────────┼─────────────────────┼───────────────┼───────────────┤
+│ F         │ U                 │ Primary             │           587 │   15768687.96 │
+│ F         │ M                 │ Advanced Degree     │           565 │   15197971.98 │
+│ M         │ S                 │ Unknown             │           560 │   15145247.80 │
+│ M         │ M                 │ 2 yr Degree         │           551 │   15074428.00 │
+│ F         │ M                 │ Secondary           │           567 │   15054247.02 │
+│ M         │ U                 │ College             │           563 │   14915863.59 │
+│ F         │ M                 │ Unknown             │           547 │   14902957.00 │
+│ M         │ D                 │ Unknown             │           539 │   14805561.34 │
+│ M         │ U                 │ 4 yr Degree         │           555 │   14705397.79 │
+│ F         │ U                 │ College             │           567 │   14638374.50 │
+│ F         │ S                 │ Unknown             │           522 │   14592407.27 │
+│ F         │ S                 │ 2 yr Degree         │           542 │   14561412.41 │
+│ F         │ U                 │ Secondary           │           556 │   14446593.60 │
+│ M         │ S                 │ 2 yr Degree         │           532 │   14374400.15 │
+│ F         │ D                 │ Secondary           │           512 │   14363019.90 │
+│ M         │ W                 │ Primary             │           537 │   14263062.47 │
+│ F         │ M                 │ College             │           524 │   14241650.30 │
+│ M         │ U                 │ Advanced Degree     │           527 │   14241395.50 │
+│ F         │ S                 │ Advanced Degree     │           522 │   14223877.47 │
+│ F         │ D                 │ 2 yr Degree         │           525 │   14184582.53 │
+├───────────┴───────────────────┴─────────────────────┴───────────────┴───────────────┤
+│ 20 rows                                                                   5 columns │
+└─────────────────────────────────────────────────────────────────────────────────────┘
+Run Time (s): real 0.144 user 0.778069 sys 0.226498
+
+
+Testing: Query 6: Inventory Analysis
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌──────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────────────────┬────────────────────┐
+│    i_item_id     │                                                                             i_item_desc                                                                              │   w_warehouse_name   │    avg_quantity    │
+│     varchar      │                                                                               varchar                                                                                │       varchar        │       double       │
+├──────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────┼────────────────────┤
+│ AAAAAAAAIJHBAAAA │ Small collections save at present international boxes. Efforts could not know less than months. Da                                                                   │ Conventional childr  │               13.0 │
+│ AAAAAAAAAEICAAAA │ Sorry options might not draw very employees. Now positive poles see police. St                                                                                       │ NULL                 │              22.75 │
+│ AAAAAAAAEJFEAAAA │ New, new trees reflect yellow, redundant organizations. Regular women consider central, present windows. For example british arrangem                                │ Important issues liv │               27.0 │
+│ AAAAAAAACPNBAAAA │ Massive police destroy probably form                                                                                                                                 │ Important issues liv │               32.0 │
+│ AAAAAAAALLAAAAAA │ Patients could learn then fund                                                                                                                                       │ Important issues liv │              35.25 │
+│ AAAAAAAAPNDDAAAA │ Experiments end. Particular others happen too. Here potential hands might drop warm years. Very coastal years know. Most old states cope again                       │ Conventional childr  │               40.0 │
+│ AAAAAAAALKKAAAAA │ Good, silver assumptions think much under a earnings. Average, ne                                                                                                    │ Important issues liv │ 42.666666666666664 │
+│ AAAAAAAADCIDAAAA │ National women find major, able shows. Direct visitors must not want indian clothes. Years must run slowly in the costs. Months mak                                  │ NULL                 │               43.0 │
+│ AAAAAAAAJEADAAAA │ Daily packages shall suffer reportedly numbers. Committees begin environmental groups. Different others blame needs; other                                           │ Conventional childr  │               45.0 │
+│ AAAAAAAAIFPBAAAA │ Entirely running managers can regard in a changes; sing                                                                                                              │ NULL                 │ 45.666666666666664 │
+│ AAAAAAAAAPDCAAAA │ Little lights will not kill silent assumptions. Artists must go. Great, simple mi                                                                                    │ Doors canno          │              46.25 │
+│ AAAAAAAAAGGBAAAA │ Combined fing                                                                                                                                                        │ Important issues liv │ 46.333333333333336 │
+│ AAAAAAAAEHECAAAA │ British, physical books could not beat a little labour, attractive parents; remote shareholders give rural, judicial sessions. Performances may question as strictly │ Important issues liv │ 47.333333333333336 │
+│ AAAAAAAAHHIAAAAA │ Evenings go simply central conditions. Small, other characters must not sha                                                                                          │ Important issues liv │ 49.333333333333336 │
+├──────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────────────────┴────────────────────┤
+│ 14 rows                                                                                                                                                                                                                   4 columns │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Run Time (s): real 0.089 user 0.233695 sys 0.378852
+
+
+Testing: Query 7: Returns Analysis
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌──────────────┬─────────────┬──────────────────┬───────────────────┐
+│ s_store_name │ num_returns │ total_return_amt │  avg_return_amt   │
+│   varchar    │    int64    │  decimal(38,2)   │      double       │
+├──────────────┼─────────────┼──────────────────┼───────────────────┤
+│ ation        │        9114 │       8841347.36 │ 978.6747133052911 │
+│ ese          │        9164 │       8792098.60 │ 967.2275687568757 │
+│ eing         │        9072 │       8791871.81 │ 978.2877278290864 │
+│ ought        │        9003 │       8739897.12 │ 980.1387372434675 │
+│ able         │        9031 │       8730264.61 │ 974.3598895089285 │
+│ bar          │        9092 │       8678317.69 │ 962.8667136358594 │
+└──────────────┴─────────────┴──────────────────┴───────────────────┘
+Run Time (s): real 0.018 user 0.035142 sys 0.024141
+
+
+Testing: Query 8: Web Sales
+------------------------
+GPU execution:
+┌─────────┐
+│ Success │
+│ boolean │
+├─────────┤
+│ 0 rows  │
+└─────────┘
+┌──────────────────┬──────────┬───────────┬───────────────┐
+│   web_site_id    │ web_name │ num_sales │  total_sales  │
+│     varchar      │ varchar  │   int64   │ decimal(38,2) │
+├──────────────────┼──────────┼───────────┼───────────────┤
+│ AAAAAAAAEBAAAAAA │ site_3   │      9840 │   25826591.66 │
+│ AAAAAAAADBAAAAAA │ site_3   │      9832 │   25362241.12 │
+│ AAAAAAAABAAAAAAA │ site_0   │      9917 │   25129461.31 │
+│ AAAAAAAAGBAAAAAA │ site_3   │      9810 │   25115387.30 │
+│ AAAAAAAANAAAAAAA │ site_2   │      9760 │   25069070.73 │
+│ AAAAAAAAEAAAAAAA │ site_0   │      9814 │   25031599.78 │
+│ AAAAAAAAKAAAAAAA │ site_1   │      9878 │   24979554.87 │
+│ AAAAAAAAHAAAAAAA │ site_1   │      9803 │   24839758.49 │
+│ AAAAAAAAABAAAAAA │ site_2   │      9984 │   24773249.79 │
+│ AAAAAAAAMBAAAAAA │ site_4   │      9720 │   24761827.03 │
+│ AAAAAAAAJBAAAAAA │ site_4   │      9776 │   24691231.38 │
+│ AAAAAAAAOAAAAAAA │ site_2   │      9688 │   24451483.81 │
+│ AAAAAAAACAAAAAAA │ site_0   │      9758 │   24430466.86 │
+│ AAAAAAAAKBAAAAAA │ site_4   │      9663 │   24361953.13 │
+│ AAAAAAAAIAAAAAAA │ site_1   │      9765 │   24252804.54 │
+├──────────────────┴──────────┴───────────┴───────────────┤
+│ 15 rows                                       4 columns │
+└─────────────────────────────────────────────────────────┘
+Run Time (s): real 0.031 user 0.091636 sys 0.047639
+
+
+========================================
+Benchmark Complete!
+========================================

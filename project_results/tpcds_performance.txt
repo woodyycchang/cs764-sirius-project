@@ -1,0 +1,21 @@
+===== GPU Execution Times =====
+[2025-11-25 03:32:32.942] [info] [sirius_extension.cpp:247] Execute query time: 248.99 ms
+[2025-11-25 03:32:33.954] [info] [sirius_extension.cpp:247] Execute query time: 996.20 ms
+[2025-11-25 03:32:33.968] [info] [sirius_extension.cpp:247] Execute query time: 4.63 ms
+[2025-11-25 03:32:33.972] [info] [sirius_extension.cpp:247] Execute query time: 2.12 ms
+[2025-11-25 03:32:33.995] [info] [sirius_extension.cpp:247] Execute query time: 21.80 ms
+[2025-11-25 03:32:34.009] [info] [sirius_extension.cpp:247] Execute query time: 11.35 ms
+[2025-11-25 03:32:34.069] [info] [sirius_extension.cpp:247] Execute query time: 57.67 ms
+[2025-11-25 03:32:34.368] [info] [sirius_extension.cpp:247] Execute query time: 294.08 ms
+[2025-11-25 03:32:34.398] [info] [sirius_extension.cpp:247] Execute query time: 10.02 ms
+[2025-11-25 03:32:34.453] [info] [sirius_extension.cpp:247] Execute query time: 51.69 ms
+[2025-11-25 03:32:34.464] [info] [sirius_extension.cpp:247] Execute query time: 7.12 ms
+[2025-11-25 03:34:20.568] [info] [sirius_extension.cpp:247] Execute query time: 395.17 ms
+[2025-11-25 03:34:20.597] [info] [sirius_extension.cpp:247] Execute query time: 0.06 ms
+[2025-11-25 05:10:15.580] [info] [sirius_extension.cpp:247] Execute query time: 167.94 ms
+[2025-11-25 05:10:44.216] [info] [sirius_extension.cpp:247] Execute query time: 169.83 ms
+[2025-11-25 05:11:31.562] [info] [sirius_extension.cpp:247] Execute query time: 173.43 ms
+[2025-11-25 05:12:33.559] [info] [sirius_extension.cpp:247] Execute query time: 169.09 ms
+[2025-11-25 05:14:39.338] [info] [sirius_extension.cpp:247] Execute query time: 181.21 ms
+[2025-11-25 05:15:23.709] [info] [sirius_extension.cpp:247] Execute query time: 191.58 ms
+[2025-11-25 05:24:04.925] [info] [sirius_extension.cpp:247] Execute query time: 157.37 ms
