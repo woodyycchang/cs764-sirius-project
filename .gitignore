@@ -25,3 +25,4 @@ s1/
 __pycache__/
 *.pyc
 .venv/
+.DS_Store
