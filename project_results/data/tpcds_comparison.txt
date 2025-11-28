@@ -1,0 +1,215 @@
+=======================================
+TPC-DS SF10: CPU vs GPU (First 99 queries)
+Date: Fri Nov 28 08:32:26 UTC 2025
+=======================================
+
+Running CPU tests...
+  Query 01: 298ms
+  Query 02: 274ms
+  Query 03: 240ms
+  Query 04: 2295ms
+  Query 05: 446ms
+  Query 06: 376ms
+  Query 07: 360ms
+  Query 08: 329ms
+  Query 09: 290ms
+  Query 10: 288ms
+  Query 11: 1422ms
+  Query 12: 289ms
+  Query 13: 391ms
+  Query 14: 1526ms
+  Query 15: 268ms
+  Query 16: 213ms
+  Query 17: 369ms
+  Query 18: 399ms
+  Query 19: 300ms
+  Query 20: 218ms
+  Query 21: 233ms
+  Query 22: 2830ms
+  Query 23: 931ms
+  Query 24: 347ms
+  Query 25: 285ms
+  Query 26: 298ms
+  Query 27: 419ms
+  Query 28: 359ms
+  Query 29: 366ms
+  Query 30: 285ms
+  Query 31: 363ms
+  Query 32: 169ms
+  Query 33: 311ms
+  Query 34: 302ms
+  Query 35: 556ms
+  Query 36: 473ms
+  Query 37: 225ms
+  Query 38: 368ms
+  Query 39: 385ms
+  Query 40: 264ms
+  Query 41: 155ms
+  Query 42: 260ms
+  Query 43: 279ms
+  Query 44: 304ms
+  Query 45: 291ms
+  Query 46: 377ms
+  Query 47: 589ms
+  Query 48: 360ms
+  Query 49: 360ms
+  Query 50: 316ms
+  Query 51: 1976ms
+  Query 52: 258ms
+  Query 53: 330ms
+  Query 54: 318ms
+  Query 55: 259ms
+  Query 56: 362ms
+  Query 57: 441ms
+  Query 58: 353ms
+  Query 59: 408ms
+  Query 60: 433ms
+  Query 61: 365ms
+  Query 62: 241ms
+  Query 63: 246ms
+  Query 64: 584ms
+  Query 65: 508ms
+  Query 66: 382ms
+  Query 67: 2992ms
+  Query 68: 396ms
+  Query 69: 296ms
+  Query 70: 299ms
+  Query 71: 327ms
+  Query 72: 632ms
+  Query 73: 280ms
+  Query 74: 1054ms
+  Query 75: 669ms
+  Query 76: 378ms
+  Query 77: 312ms
+  Query 78: 892ms
+  Query 79: 358ms
+  Query 80: 511ms
+  Query 81: 355ms
+  Query 82: 251ms
+  Query 83: 203ms
+  Query 84: 202ms
+  Query 85: 340ms
+  Query 86: 291ms
+  Query 87: 414ms
+  Query 88: 313ms
+  Query 89: 325ms
+  Query 90: 183ms
+  Query 91: 173ms
+  Query 92: 213ms
+  Query 93: 429ms
+  Query 94: 273ms
+  Query 95: 743ms
+  Query 96: 209ms
+  Query 97: 459ms
+  Query 98: 371ms
+  Query 99: 250ms
+
+Running GPU tests (single session)...
+
+=======================================
+Results Comparison
+=======================================
+Query         CPU(ms)    GPU(ms)    Speedup      Match
+-----------------------------------------------------------
+01                298        131      2.27x        ✓
+02                274         99      2.76x        ✓
+03                240         43      5.58x        ✓
+04               2295       1755      1.30x        ✓
+05                446         97      4.59x        ✓
+06                376        165      2.27x        ✓
+07                360        116      3.10x        ✓
+08                329         86      3.82x        ✓
+09                290        129      2.24x        ✓
+10                288         76      3.78x        ✓
+11               1422       1035      1.37x        ✓
+12                289         98      2.94x        ✓
+13                391        109      3.58x        ✓
+14               1526       1212      1.25x        ✓
+15                268        115      2.33x        ✓
+16                213         59      3.61x        ✓
+17                369        133      2.77x        ✓
+18                399        230      1.73x        ✓
+19                300         82      3.65x        ✓
+20                218         64      3.40x        ✓
+21                233         54      4.31x        ✓
+22               2830       1698      1.66x        ✓
+23                931        472      1.97x        ✓
+24                347        106      3.27x        ✓
+25                285         81      3.51x        ✓
+26                298        119      2.50x        ✓
+27                419        170      2.46x        ✓
+28                359        136      2.63x        ✓
+29                366        116      3.15x        ✓
+30                285        153      1.86x        ✓
+31                363        148      2.45x        ✓
+32                169         19      8.89x        ✓
+33                311         56      5.55x        ✓
+34                302         59      5.11x        ✓
+35                556        259      2.14x        ✓
+36                473        277      1.70x        ✓
+37                225         40      5.62x        ✓
+38                368        229      1.60x        ✓
+39                385        170      2.26x        ≈
+40                264         76      3.47x        ✓
+41                155         34      4.55x        ✓
+42                260         91      2.85x        ✓
+43                279         84      3.32x        ✓
+44                304         85      3.57x        ✓
+45                291        138      2.10x        ✓
+46                377        142      2.65x        ✓
+47                589        415      1.41x        ✓
+48                360        113      3.18x        ✓
+49                360         99      3.63x        ✓
+50                316         81      3.90x        ✓
+51               1976       1568      1.26x        ✓
+52                258         65      3.96x        ✓
+53                330         61      5.40x        ✓
+54                318        103      3.08x        ✓
+55                259         56      4.62x        ✓
+56                362         80      4.52x        ✓
+57                441        261      1.68x        ✓
+58                353        113      3.12x        ✓
+59                408        175      2.33x        ✓
+60                433         83      5.21x        ✓
+61                365        101      3.61x        ✓
+62                241         40      6.02x        ✓
+63                246         42      5.85x        ✓
+64                584        263      2.22x        ✓
+65                508        243      2.09x        ≈
+66                382         57      6.70x        ✓
+67               2992       1955      1.53x        ✓
+68                396        117      3.38x        ✓
+69                296        113      2.61x        ✓
+70                299         78      3.83x        ✓
+71                327         76      4.30x        ✓
+72                632        355      1.78x        ✓
+73                280         47      5.95x        ✓
+74               1054        896      1.17x        ✓
+75                669        439      1.52x        ✓
+76                378        104      3.63x        ✓
+77                312        100      3.12x        ✓
+78                892        449      1.98x        ✓
+79                358         92      3.89x        ✓
+80                511        152      3.36x        ✓
+81                355        185      1.91x        ✓
+82                251         64      3.92x        ✓
+83                203         63      3.22x        ✓
+84                202         60      3.36x        ✓
+85                340        157      2.16x        ✓
+86                291         84      3.46x        ✓
+87                414        194      2.13x        ✓
+88                313        153      2.04x        ✓
+89                325         81      4.01x        ✓
+90                183         15     12.20x        ✓
+91                173         37      4.67x        ✓
+92                213         39      5.46x        ✓
+93                429        198      2.16x        ✓
+94                273         50      5.46x        ✓
+95                743        541      1.37x        ✓
+96                209         25      8.36x        ✓
+97                459        252      1.82x        ✓
+98                371        107      3.46x        ✓
+99                250         98      2.55x        ✓
+
+Match Legend: ✓ = Exact match, ≈ = Same row count, ✗ = Different, ? = Cannot compare
+Note: GPU timing includes per-query overhead but not the one-time 9s initialization
